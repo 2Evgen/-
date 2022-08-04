@@ -6,25 +6,37 @@ import org.junit.jupiter.api.Test;
 public class SqrServiceTest {
 
     @Test
-    public void shouldCalcExact() {
+    public void test() {
         SqrService service = new SqrService();
 
-        int expected = 16;
-        int actual = service.sqrOfNumber(service.max, service.min);
+        int actual = service.calculate(200, 300);
+        int expected = 3;
 
         Assertions.assertEquals(expected, actual);
 
     }
 
-    //  @Test
-    //  public void shouldCalcInExact() {
-    //      SqrService service = new SqrService();
+    @Test
+    public void test2() {
+        SqrService service = new SqrService();
 
-    //     int expected = 15;
-    //     int actual = service.sqrOfNumber(service.min);
+        int actual = service.calculate(0, 0);
+        int expected = 0;
 
-    //     Assertions.assertEquals(expected, actual);
+        Assertions.assertEquals(expected, actual);
 
+    }
+
+    @Test
+    public void test3() {
+        SqrService service = new SqrService();
+
+        int actual = service.calculate(300, 600);
+        int expected = 7;
+
+        Assertions.assertEquals(expected, actual);
+
+    }
 }
 
 
